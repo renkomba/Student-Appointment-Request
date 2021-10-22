@@ -27,7 +27,7 @@ function createReservationInfo() {
       let [monthDay, year, time] = splitDateAndTime(event.start.dateTime.toString());
 
       [student.firstName, student.lastName] = getStudentName(event.summary);
-      student.id = guest ? guest.split('@') : 'teacher override';
+      student.id = guest ? guest.split('@')[0] : 'teacher override';
       [student.period, student.requestedDate] = [getClassPeriod(student.id), monthDay];
       students.push(student);
     }
