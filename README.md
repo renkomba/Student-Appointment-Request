@@ -25,7 +25,6 @@ The county will never hire me a classroom administrative assistant for Christmas
   * Update the Calendar name & request sheet
 
 #### The code assumes:
-  * There are 3 guests per event
   * The student's guest email is the only numeric one
   * The request sheet requires:
     * the teacher's last name, room, & subject
