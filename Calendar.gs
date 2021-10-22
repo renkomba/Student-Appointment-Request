@@ -1,5 +1,5 @@
 var calendar = {
-  id: '--------@???????.edu' 
+  id: 'Calendar Name' 
 };
 
 calendar.self = CalendarApp.getCalendarById(calendar.id);
