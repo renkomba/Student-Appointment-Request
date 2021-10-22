@@ -25,7 +25,7 @@ The county will never hire me a classroom administrative assistant for Christmas
   * Update the Calendar name & request sheet
 
 #### The code assumes:
-  * The student's guest email is the only numeric one
+  * The students' email account don't have a "nickname" tag
   * The request sheet requires:
     * the teacher's last name, room, & subject
     * the student's name, ID, & class period
