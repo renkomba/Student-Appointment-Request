@@ -32,7 +32,6 @@ function createReservationInfo() {
       students.push(student);
     }
   }
-  // console.log(students);
   return students;
 }
 
@@ -42,10 +41,7 @@ function getClassPeriod(studentId) {
 
   for (let i = 0; i < classPeriods.length; i++) {
     let [period, studentIds] = [classPeriods[i][0], classPeriods[i][1]];
-
-    if (studentIds.includes(studentId)) {
-      return period;
-    }
+    if (studentIds.includes(studentId)) return period;
   }
 }
 
