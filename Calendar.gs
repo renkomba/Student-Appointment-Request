@@ -4,7 +4,7 @@ calendar.self = CalendarApp.getCalendarById(calendar.id);
 calendar.timeZone = calendar.self.getTimeZone()
 
 /**
- * Find (max) 10 upcoming appointments that have 'permanence' in the title,
+ * Find all upcoming appointments that have 'permanence' in the title,
  * and do not pre-date the current date
  */
 function getComingAppointments() {
