@@ -1,4 +1,4 @@
-// Student ids for each class period. Fake ids here to protect student information.
+// Student ids for each class period. These are fake to protect student information.
 const period = {
   2: ['1234567', '2345678', '3456789', '4567890', '5678901', '6789012'],
   3: ['7890123', '8901234', '9012345', '0123456', '7654321', '6543210'],
@@ -8,7 +8,7 @@ const period = {
 
 // Create object with info that applies to all students
 function createStudentObject() {
-  return student = {
+  return {
   contact: 'Yes',
   room: '###',
   subject: 'World Languages',
