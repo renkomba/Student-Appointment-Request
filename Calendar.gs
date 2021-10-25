@@ -4,8 +4,8 @@ calendar.self = CalendarApp.getCalendarById(calendar.id);
 calendar.timeZone = calendar.self.getTimeZone()
 
 /**
- * Find all upcoming appointments that have 'permanence' in the title,
- * and do not pre-date the current date
+ * Find all upcoming appointments with 'permanence' in
+ * their title that do not pre-date the current date
  */
 function getComingAppointments() {
   return Calendar.Events.list(calendar.id, {
@@ -14,7 +14,10 @@ function getComingAppointments() {
   });
 }
 
-// get appointment month/day, year, and time
+/**
+ * Separate the date and time (see format on line 13).
+ * Remove leading 0 in day & combine month & day in str
+*/
 function splitDateAndTime(dateTime=String) {
   let [date, time] = dateTime.split('T');
   let [year, month, day] = date.split('-');
