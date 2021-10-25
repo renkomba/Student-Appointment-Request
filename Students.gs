@@ -6,7 +6,7 @@ const period = {
   6: ['9876543', '8765432', '1357902', '2468013', '3579024', '4680135']
 }
 
-// Create object with info that applies to all students
+// Create object with common properties specific to the spreadsheet
 function createStudentObject() {
   return {
   contact: 'Yes',
@@ -35,7 +35,7 @@ function createReservationInfo() {
   return students;
 }
 
-// Find which class period the student is in
+// Find which class period the student is in via their student ID
 function getClassPeriod(studentId) {
   let classPeriods = Object.entries(period);
 
