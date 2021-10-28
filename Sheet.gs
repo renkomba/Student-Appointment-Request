@@ -1,5 +1,5 @@
-var interventionSheetURL = 'https://docs.google.com/spreadsheets/d/1AqjqdiX_8gC8HrqAGOGFyC7OepjuhGJwwYZuu-MWPcI/edit#gid=270695029';
-var testSheetURL = 'https://docs.google.com/spreadsheets/d/1K-q_ezftfoZ4P83Yvat46tBV7-tieaMO1DJbDgYKt3U/edit#gid=382370341';
+var interventionSheetURL = 'URL REDACTED';
+var testSheetURL = 'URL REDACTED';
 
 var test = SpreadsheetApp.openByUrl(testSheetURL);
 var ss = SpreadsheetApp.openByUrl(interventionSheetURL);
@@ -32,7 +32,7 @@ function setRequestInTestSheet(student) {
   date = Utilities.formatDate(formattedDate, calendar.timeZone, 'MMMM d').toString();
   date = date.slice(-3).startsWith('0') ? date.splice(-3) : date;
   student[8] = date;
-  console.log(`Student: ${student}`);
+//   console.log(`Student: ${student}`);
 
   for (lastRowWithData; lastRowWithData < testSheet.getMaxRows(); lastRowWithData++) {
     let oldRequestTeacher = testSheet.getRange(lastRowWithData, column).getValue();
@@ -41,7 +41,7 @@ function setRequestInTestSheet(student) {
   }
 
   // If this was a student request, add it to the sheet
-  if (parseInt(period) && !pastRequests.includes(student.id)) {
+  if (parseInt(period) && !pastRequests.includes(student.id)) {  // requires that each day's request is in a separate sheet
     testSheet.getRange(lastRowWithData, column, 1, student.length).setValues([student]);
   }
 }
