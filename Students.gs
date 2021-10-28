@@ -24,7 +24,7 @@ function createReservationInfo() {
     for (let i = 0; i < events.items.length; i++) {
       let [event, student] = [events.items[i], createStudentObject()];
       let guest = event.attendees.map( e => e.displayName ? '' : e.email ).filter( e => e )[0];
-      let [monthDay, year, time] = splitDateAndTime(event.start.dateTime.toString());
+      let [monthDay, year, time] = splitDateAndTime(event.start.dateTime.toString());  // year & time not used
 
       [student.firstName, student.lastName] = getStudentName(event.summary);
       student.id = guest ? guest.split('@')[0] : 'teacher override';
