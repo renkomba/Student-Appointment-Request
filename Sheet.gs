@@ -40,7 +40,7 @@ function setRequestInTestSheet(student) {
     break;
   }
 
-  // If this was a student request, add it to the sheet
+  // If this was a student request (aka email address is numeric), add it to the sheet
   if (parseInt(period) && !pastRequests.includes(student.id)) {  // requires that each day's request is in a separate sheet
     testSheet.getRange(lastRowWithData, column, 1, student.length).setValues([student]);
   }
